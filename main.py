@@ -5,10 +5,12 @@ import os
 from urllib.parse import quote
 
 
+#### NOTE:- I AM NOT THE AUTHOR OF THIS CODE #####
+
 # Script Configuration
 linkedin_email = "odelapradeep12@gmail.com" # place your linkedin login email
-linkedin_password = "scintest" # place your linkedin login password
-target_company_link = "https://www.linkedin.com/company/johnson-&-johnson/" # place company URL in mentioned format only! do not remove trailing slash
+linkedin_password = "PASSWORD" # place your linkedin login password
+target_company_link = "https://www.linkedin.com/company/johnson-&-johnson/" # place company URL 
 # End Script Configuration
 
 class LinkedIn:
@@ -76,7 +78,7 @@ class LinkedIn:
         return emails_found
 
     def saveRecord(self, data):
-        with open('leads.csv', mode='a+', encoding='utf-8', newline='') as csvFile:
+        with open('empolys.csv', mode='a+', encoding='utf-8', newline='') as csvFile:
             fieldnames = ["Profile Link", "Full Name", "Headline", "Country"]
             writer = csv.DictWriter(csvFile, fieldnames=fieldnames)
             if os.stat('leads.csv').st_size == 0:
